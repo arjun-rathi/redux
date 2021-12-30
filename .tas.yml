@@ -13,4 +13,5 @@ preRun:
 postRun:
      command:
         - node --version
+        - echo 'Done'
 version: 1.0
