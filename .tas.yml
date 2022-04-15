@@ -1,16 +1,18 @@
 ---
 framework: jest
-postMerge:
-  pattern:
-    - "./test/**/*.spec.ts"
-preMerge:
-  pattern:
-    - "./test/**/*.spec.ts"
 preRun:
      command:
         - npm ci
         - npm run build
+preMerge:
+  pattern:
+    - "./test/**/*.spec.ts"
+postMerge:
+  pattern:
+    - "./test/**/*.spec.ts"
 postRun:
      command:
         - node --version
+configFile: jest.config.js
+parallelism: 2
 version: 1.0
